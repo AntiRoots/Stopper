@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title id="container">
+      Stopper
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-row>
+  <ion-item>
+      <ion-textarea ></ion-textarea>
+  </ion-item>
+</ion-row>
+    
+  
+<ion-fab class="fix">
+  <div class="stopper">
+    <div class="counter">
+      <span>{{h}}:</span>
+      <span>{{min}}:</span>
+      <span>{{sec}}:</span>
+      <span>{{ms}}</span>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="buttons">
+    <ion-button   horizontal="center" shape="round" (click)="start()"><ion-icon name="play"></ion-icon>Start</ion-button>
+    <ion-button  horizontal="end" shape="round" (click)="stop()"><ion-icon name="pause"></ion-icon>Stop</ion-button>
+    <ion-button  horizontal="center" shape="round" (click)="reset()"><ion-icon name="square"></ion-icon>Reset</ion-button>
+     <ion-button shape="round"  (click)="lap()"><ion-icon name="stopwatch-outline"></ion-icon>Lap</ion-button>
+    </div>
   </div>
-</ion-content>
+  <table id="lap"></table>
+</ion-fab>

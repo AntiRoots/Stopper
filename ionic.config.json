@@ -1,7 +1,0 @@
-{
-  "name": "Stopper",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
